@@ -1,3 +1,7 @@
+## Before any actions
+
+### `npm ci`
+
 ## Available Scripts
 
 In the project directory, you can run:

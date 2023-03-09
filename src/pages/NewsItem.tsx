@@ -1,7 +1,8 @@
-import React, {useEffect} from "react";
+import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { ArrowLeftOutlined, SwapRightOutlined } from "@ant-design/icons";
 import { Button, Typography } from "antd";
+import CommentTree from "../components/CommentTree";
 import { News } from "../models";
 
 const { Text } = Typography;
@@ -10,17 +11,9 @@ const NewsItem = () => {
     const data: News = useLocation().state
     const navigate = useNavigate()
 
-    useEffect(() => {
-        if(!data) {
-            toRootPath()
-        }
-    }, [data])
-
     const toRootPath = () => {
         navigate('/')
     }
-
-    console.log(data)
 
     return (
         <div>
@@ -39,10 +32,7 @@ const NewsItem = () => {
                 <p style={{marginRight: '5%'}}><Text italic>by {data.by}</Text></p>
                 <p><Text type="secondary">{new Date(data.time * 1000).toUTCString().replace('GMT', '')}</Text></p>
             </div>
-
-            <div>
-
-            </div>
+            <CommentTree ids={data.kids}/>
         </div>
     )
 }

@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { News, NewsSlice } from "../../models";
 
-const baseUrl = 'https://hacker-news.firebaseio.com/v0/'
+export const baseUrl = 'https://hacker-news.firebaseio.com/v0/'
 const limit100 = '&limitToFirst=100'
 const orderBySort = '&orderBy="$key"'
 

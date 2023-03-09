@@ -14,7 +14,7 @@ const MainLayout: React.FC = () => {
 
     return (
         <Layout style={{height: '100vh'}}>
-            <Header style={{ position: 'sticky', top: 0, zIndex: 1, width: '100%' }}>
+            <Header style={{ position: 'sticky', top: 0, zIndex: 1, width: '100%'}}>
                 <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: '100%'}}>
                     <h1 style={{color: 'white'}}>News List</h1>
                     <Counter />
